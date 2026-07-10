@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio — experience, skills, and projects.">
-  <title>Your Name — Portfolio</title>
+  <meta name="description" content="David Tran — Software Engineer specializing in backend systems, AWS infrastructure, and distributed platforms.">
+  <title>David Tran — Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
-      <a class="nav__logo" href="#top">YN</a>
+      <a class="nav__logo" href="#top">DT</a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span></span>
         <span></span>
@@ -33,19 +33,19 @@
   <main id="main">
     <section class="hero">
       <div class="hero__content">
-        <p class="hero__eyebrow">Open to opportunities</p>
+        <p class="hero__eyebrow">Open to opportunities · San Diego, CA</p>
         <h1 class="hero__title">
-          Hi, I'm <span class="hero__name">Your Name</span>.
+          Hi, I'm <span class="hero__name">David Tran</span>.
         </h1>
         <p class="hero__subtitle">
-          Your professional title — e.g. Software Engineer, Product Designer, Data Analyst
+          Software Engineer
         </p>
         <p class="hero__summary">
-          A concise 2–3 sentence summary of who you are, what you do best, and the kind of impact you create for teams and users.
+          I spent three years at Amazon on the Edge Device Management team, building internal platforms that securely provisioned and managed devices across warehouse operations. My work ranged from backend APIs and orchestration workflows to AWS infrastructure, CI/CD improvements, and automation that reduced manual operational work at scale
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#contact">Get in touch</a>
-          <a class="btn btn--ghost" href="#experience">View experience</a>
+          <a class="btn btn--ghost" href="assets/David-Tran-Resume.pdf" target="_blank" rel="noopener noreferrer">Download resume</a>
         </div>
       </div>
       <div class="hero__visual" aria-hidden="true">
@@ -61,20 +61,20 @@
         </header>
         <div class="about__grid">
           <p class="about__lead">
-            Expand on your story here — your background, what drives you, and the problems you love solving. This is where recruiters get a sense of your voice and fit.
+            Today, I'm focused on backend engineering, distributed systems, and cloud infrastructure. I enjoy designing reliable services, building developer tools and automation, and solving complex problems with simple, maintainable software. Outside of my professional experience, I also built an event-driven automated trading platform to deepen my experience with fault-tolerant systems, APIs, and production operations.
           </p>
           <ul class="about__highlights">
             <li>
-              <strong>Years of experience</strong>
-              <span>e.g. 5+ years building web applications</span>
+              <strong>Education</strong>
+              <span>B.S. Computer Science, UC Irvine (2020)</span>
             </li>
             <li>
               <strong>Domain focus</strong>
-              <span>e.g. fintech, healthcare, developer tools</span>
+              <span>Backend APIs, Cloud Infrastructure, Platform Engineering, Automation</span>
             </li>
             <li>
-              <strong>What you're looking for</strong>
-              <span>e.g. senior IC role, remote-friendly team</span>
+              <strong>What I'm looking for</strong>
+              <span>Software engineering roles where I can ship reliable systems and drive measurable impact</span>
             </li>
           </ul>
         </div>
@@ -92,17 +92,17 @@
             <div class="timeline__marker"></div>
             <article class="timeline__card">
               <header class="timeline__meta">
-                <time datetime="2023">2023 — Present</time>
-                <span class="timeline__company">Company Name</span>
+                <time datetime="2025-07">Jul 2025 — Feb 2026</time>
+                <span class="timeline__company">Independent Project · San Diego, CA</span>
               </header>
-              <h3>Job Title</h3>
+              <h3>Software Engineer — Automated Trading Platform</h3>
               <p>
-                Describe your role and impact. Lead with outcomes: what you built, improved, or shipped, and how it helped the business or users.
+                Designed and built an event-driven automated trading platform on AWS, emphasizing reliability, fault tolerance, and risk-controlled order execution.
               </p>
               <ul class="timeline__bullets">
-                <li>Key achievement with a measurable result</li>
-                <li>Another accomplishment showing scope or leadership</li>
-                <li>Technology or process you introduced or improved</li>
+                <li>Developed and deployed a Python service on EC2 that processes TradingView webhooks, validates incoming payloads, and executes trades through exchange APIs.</li>
+                <li>Prevented duplicate and conflicting trades by enforcing a single-position constraint through live exchange state validation before order execution.</li>
+                <li>Improved system resilience with retry logic, input validation, structured logging, and alerting; validated reliability across 100+ webhook events and 100+ paper trades.</li>
               </ul>
             </article>
           </li>
@@ -110,16 +110,47 @@
             <div class="timeline__marker"></div>
             <article class="timeline__card">
               <header class="timeline__meta">
-                <time datetime="2021">2021 — 2023</time>
-                <span class="timeline__company">Previous Company</span>
+                <time datetime="2021-05">May 2021 — Jun 2024</time>
+                <span class="timeline__company">Amazon · Seattle, WA</span>
               </header>
-              <h3>Previous Title</h3>
+              <h3>Software Development Engineer</h3>
               <p>
-                Brief overview of responsibilities and the team or product context.
+                Built backend APIs, orchestration workflows, and automation for Amazon's self-service edge device provisioning platform, enabling secure provisioning, deployment, and management of warehouse edge devices at scale.
               </p>
               <ul class="timeline__bullets">
-                <li>Notable project or deliverable</li>
-                <li>Collaboration or cross-functional work</li>
+                <li>Reduced edge device onboarding time from 3–6 hours to ~1 hour while cutting provisioning errors by 60%.</li>
+                <li>Implemented per-client RBAC and least-privilege authorization, including automated permission provisioning and migration tooling.</li>
+                <li>Reduced CI/CD build and test cycles by 40% through refactoring services, pipelines, and CloudFormation-backed infrastructure.</li>
+                <li>Reduced hardware sourcing lead times from 10–16 weeks to 2 weeks, enabling deployment of 250+ devices across global Amazon operations.</li>
+                <li>Automated AWS IoT Greengrass validation and redeployment, reducing provisioning-related support tickets.</li>
+              </ul>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <article class="timeline__card">
+              <header class="timeline__meta">
+                <time datetime="2019-10">Oct 2019 — Mar 2020</time>
+                <span class="timeline__company">Inseego · San Diego, CA</span>
+              </header>
+              <h3>Junior Software Engineer</h3>
+              <ul class="timeline__bullets">
+                <li>Migrated vendor-managed Azure workflows into Inseego's infrastructure by reverse-engineering existing implementations and rebuilding unsupported components.</li>
+                <li>Created test files and wrote ad-hoc SQL queries to validate releases and support quality assurance during development.</li>
+              </ul>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <article class="timeline__card">
+              <header class="timeline__meta">
+                <time datetime="2018-09">Sep 2018 — Dec 2018</time>
+                <span class="timeline__company">Dreams for Schools · Irvine, CA</span>
+              </header>
+              <h3>STEM Mentor</h3>
+              <ul class="timeline__bullets">
+                <li>Taught students to build STEM-focused Android applications over a 9-week program.</li>
+                <li>Led a student team to 1st place out of 22 teams in a showcase competition at UC Irvine.</li>
               </ul>
             </article>
           </li>
@@ -135,29 +166,41 @@
         </header>
         <div class="skills__grid">
           <div class="skills__group">
-            <h3>Core strengths</h3>
+            <h3>Languages</h3>
             <ul class="tag-list">
-              <li>Skill one</li>
-              <li>Skill two</li>
-              <li>Skill three</li>
-              <li>Skill four</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>SQL</li>
+              <li>Bash/Shell</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Tools &amp; technologies</h3>
+            <h3>Cloud &amp; infrastructure</h3>
             <ul class="tag-list">
-              <li>Tool / language</li>
-              <li>Framework</li>
-              <li>Platform</li>
-              <li>Other</li>
+              <li>AWS (S3, DynamoDB, EC2, Lambda)</li>
+              <li>CloudFront</li>
+              <li>API Gateway</li>
+              <li>CloudFormation</li>
+              <li>AWS CDK</li>
+              <li>CloudWatch</li>
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>CI/CD</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Soft skills</h3>
+            <h3>Systems &amp; architecture</h3>
             <ul class="tag-list">
-              <li>Communication</li>
-              <li>Leadership</li>
-              <li>Problem solving</li>
+              <li>Backend development</li>
+              <li>Distributed systems</li>
+              <li>RESTful APIs</li>
+              <li>Microservices</li>
+              <li>Event-driven architecture</li>
+              <li>Authorization (RBAC)</li>
+              <li>Infrastructure as Code (IaC)</li>
+              <li>Git</li>
             </ul>
           </div>
         </div>
@@ -173,35 +216,32 @@
         <div class="projects__grid">
           <article class="project-card">
             <div class="project-card__header">
-              <h3>Project Name</h3>
-              <div class="project-card__links">
-                <a href="#" aria-label="View project live">Live</a>
-                <a href="#" aria-label="View project source code">Code</a>
-              </div>
+              <h3>Automated Trading Platform</h3>
             </div>
             <p>
-              Short description of the project, your role, and the outcome. Highlight tech stack and what makes it worth showing.
+              A personal event-driven trading system with webhook ingestion, exchange API integration, and strict risk controls. Built for reliability with retry logic, structured logging, and live state validation before every trade.
             </p>
             <ul class="tag-list tag-list--compact">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>PostgreSQL</li>
+              <li>Python</li>
+              <li>AWS EC2</li>
+              <li>REST APIs</li>
+              <li>TradingView Webhooks</li>
+              <li>Exchange APIs</li>
             </ul>
           </article>
           <article class="project-card">
             <div class="project-card__header">
-              <h3>Another Project</h3>
-              <div class="project-card__links">
-                <a href="#" aria-label="View project live">Live</a>
-                <a href="#" aria-label="View project source code">Code</a>
-              </div>
+              <h3>Amazon Device Provisioning Platform</h3>
             </div>
             <p>
-              Another standout piece of work — side project, open source contribution, or case study from a previous role.
+              Self-service backend platform for securely provisioning and managing Amazon edge devices. Automated OS installation, device authentication, network configuration, and software deployment while supporting multi-vendor hardware across global operations.
             </p>
             <ul class="tag-list tag-list--compact">
-              <li>Python</li>
-              <li>API design</li>
+              <li>Java</li>
+              <li>AWS</li>
+              <li>CloudFormation</li>
+              <li>REST APIs</li>
+              <li>RBAC</li>
             </ul>
           </article>
         </div>
@@ -216,23 +256,27 @@
         </header>
         <div class="contact__panel">
           <p class="contact__lead">
-            I'm actively looking for my next role. Reach out if you'd like to talk about how I can contribute to your team.
+            I'm actively looking for my next software engineering role. Reach out if you'd like to talk about how I can contribute to your team.
           </p>
           <div class="contact__links">
-            <a class="contact__link" href="mailto:you@email.com">
+            <a class="contact__link" href="mailto:tran.david.huy@gmail.com">
               <span class="contact__link-label">Email</span>
-              <span>you@email.com</span>
+              <span>tran.david.huy@gmail.com</span>
             </a>
-            <a class="contact__link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a class="contact__link" href="https://www.linkedin.com/in/david-tran-b03439173" target="_blank" rel="noopener noreferrer">
               <span class="contact__link-label">LinkedIn</span>
-              <span>linkedin.com/in/yourprofile</span>
+              <span>linkedin.com/in/david-tran-b03439173</span>
             </a>
-            <a class="contact__link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a class="contact__link" href="https://github.com/trandavidhuy" target="_blank" rel="noopener noreferrer">
               <span class="contact__link-label">GitHub</span>
-              <span>github.com/yourusername</span>
+              <span>github.com/trandavidhuy</span>
+            </a>
+            <a class="contact__link" href="assets/David-Tran-Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="contact__link-label">Resume</span>
+              <span>Download PDF</span>
             </a>
           </div>
-          <a class="btn btn--primary" href="mailto:you@email.com">Send an email</a>
+          <a class="btn btn--primary" href="mailto:tran.david.huy@gmail.com">Send an email</a>
         </div>
       </div>
     </section>
@@ -240,7 +284,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Your Name. Built with care.</p>
+      <p>&copy; <span id="year"></span> David Tran. Built with care.</p>
     </div>
   </footer>
 
