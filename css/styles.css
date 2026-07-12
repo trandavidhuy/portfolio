@@ -214,10 +214,8 @@ p {
 /* ── Hero ──────────────────────────────────────────────────────── */
 .hero {
   min-height: calc(100vh - var(--header-height));
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  gap: var(--space-xl);
   width: min(100% - 2rem, var(--max-width));
   margin-inline: auto;
   padding-block: var(--space-xl);
@@ -258,31 +256,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-}
-
-.hero__visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.hero__orb {
-  width: min(100%, 22rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, var(--color-accent-glow), transparent 55%),
-    radial-gradient(circle at 70% 70%, rgba(100, 130, 220, 0.2), transparent 50%),
-    var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 0 80px var(--color-accent-soft);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
 }
 
 /* ── Sections ──────────────────────────────────────────────────── */
@@ -556,6 +529,110 @@ p {
   flex: 1;
 }
 
+/* ── Case study pages ──────────────────────────────────────────── */
+.case-study-hero {
+  padding-top: var(--space-xl);
+}
+
+.case-study-hero__back {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.case-study-hero__back:hover {
+  text-decoration: underline;
+}
+
+.case-study-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+.case-study-hero__meta {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.case-study-hero__summary {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.star-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.star-card {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.star-card--highlight {
+  border-color: rgba(232, 168, 73, 0.3);
+  background: linear-gradient(135deg, var(--color-surface), rgba(232, 168, 73, 0.06));
+}
+
+.star-card h3 {
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.star-card > p {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.star-card__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.star-card__bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.star-card__bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.case-study-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.case-study-cta p {
+  color: var(--color-text-muted);
+  max-width: 32rem;
+}
+
 /* ── Contact ───────────────────────────────────────────────────── */
 .contact__panel {
   max-width: 40rem;
@@ -620,22 +697,14 @@ p {
 /* ── Responsive ────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
     padding-block: var(--space-2xl);
   }
 
-  .hero__visual {
-    order: -1;
-  }
-
-  .hero__orb {
-    width: 12rem;
-  }
-
   .about__grid,
   .skills__grid,
-  .projects__grid {
+  .projects__grid,
+  .star-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -686,10 +755,6 @@ p {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .hero__orb {
-    animation: none;
   }
 
   .btn:active,

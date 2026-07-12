@@ -1,8 +1,31 @@
 (function () {
+  const PROJECTS = {
+    "automated-trading": {
+      title: "Automated Trading Platform",
+      tags: ["Python", "AWS EC2", "REST APIs", "TradingView Webhooks", "Exchange APIs"],
+    },
+    "amazon-device-provisioning": {
+      title: "Amazon Device Provisioning Platform",
+      tags: ["Java", "AWS", "CloudFormation", "REST APIs", "RBAC"],
+    },
+  };
+
+  function renderProjectTags() {
+    document.querySelectorAll("[data-project-tags]").forEach((list) => {
+      const key = list.getAttribute("data-project-tags");
+      const tags = PROJECTS[key]?.tags;
+      if (!tags?.length) return;
+
+      list.innerHTML = tags.map((tag) => `<li>${tag}</li>`).join("");
+    });
+  }
+
   const yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  renderProjectTags();
 
   const toggle = document.querySelector(".nav__toggle");
   const menu = document.querySelector(".nav__menu");
